@@ -3,7 +3,7 @@ data "spacelift_current_stack" "this" {}
 resource "spacelift_stack" "managed" {
   name        = "Managed stack"
   description = "Your first stack managed by Terraform"
-  space_id    = "daniel-test-01K9AG0GPKECVSQKTQ4KS9F99R"
+  space_id    = var.space_id
 
   repository   = "terraform-starter"
   branch       = "main"
